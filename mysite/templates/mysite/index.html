@@ -1,0 +1,183 @@
+{% extends 'mysite/base.html' %}
+
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+
+        </div>
+    </div>
+
+
+    <!-- пост метод для вывода -->
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-22 mx-auto" style="margin-top: 70px">
+                <form action="{% url 'zakaz' %}" method="post">
+                    {% csrf_token %}
+
+
+                    <div class="container">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img src="static/mysite/images/doner.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h3 class="card-title">Донер</h3>
+
+                                    <p class="card-text">Сочный донер с обжаренной до золотистой корочки курицей,
+                                        пармезаном, свежими
+                                        овощами и соусом тар-тар. </p>
+                                    <p class="card-text">
+
+                                    <h2 class="text">600 тг</h2>
+
+                                    <div class="col-sm-auto">
+                                        <input name='doner' placeholder='0' class="form-control" type="text">
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img src="static/mysite/images/bors.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">Борщеллионе</h2>
+                                    <p class="card-text">Суп "Борщеллионе" — оригинальный итальянский суп с мелкими
+                                        макаронами и
+                                        чечевицей. Основу
+                                        этого оригинального супа составляют красная чечевица и нежная мелкая паста —
+                                        птитим.
+
+                                    </p>
+                                    <p class="card-text">
+                                    <h2 class="text">5000 тг</h2>
+                                    <div class="col-sm-auto">
+                                        <input name='bors' placeholder='0' class="form-control" type="text">
+                                    </div>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="static/mysite/images/frik.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h2 class="card-title">Фрикадельки</h2>
+                                    <p class="card-text">Суп с фрикадельками — одно из самых вкусных и популярных блюд.
+                                        Рецепт его
+                                        приготовления весьма прост, а результат — выше всяких похвал.
+
+                                    </p>
+                                    <p class="card-text">
+                                    <h2 class="text">1000 тг</h2>
+                                    <div class="col-sm-auto">
+                                        <input name='frik' placeholder='0' class="form-control" type="text">
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 mx-auto" style="margin-top: 70px">
+                        <a class="text"> <font size="6" color="#007bff	" face="Tahoma">Данные заказчика</font></a>
+
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Имя</label>
+                            <div class="col-10">
+                                <input name='name' class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Фамилия</label>
+                            <div class="col-10">
+                                <input name='surname' class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Отчество</label>
+                            <div class="col-10">
+                                <input name='fathername' class="form-control" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Телефон</label>
+                            <div class="col-10">
+                                <input name='phone' class="form-control" type="text">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Email</label>
+                            <div class="col-10">
+                                <input name='email' class="form-control" type="email" id="example-email-input">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Адрес</label>
+                            <div class="col-10">
+                                <input name='adress' class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" name="dr" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label"  style="left: 7%" style="margin-bottom: 3%"
+                                       for="customSwitch1">У меня сегодня день рождения</label>
+                            </div>
+                        </div>
+
+
+                        <div class="pull-right">
+                            <button type="submit" class="btn btn-danger btn-lg btn-block">Заказать</button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    <a class="text"> <font size="6" color="#ffffff" face="Tahoma">Слово (Скрываеться)</font></a>
+
+
+
+
+
+    <!-- <div class="container">
+         <div class="card">
+
+
+    `. ___
+                    __,' __`.                _..----....____
+        __...--.'``;.   ,.   ;``--..__     .'    ,-._    _.-'
+  _..-''-------'   `'   `'   `'     O ``-''._   (,;') _,'
+,'________________                          \`-._`-','
+ `._              ```````````------...___   '-.._'-:
+    ```--.._      ,.                     ````--...__\-.
+            `.--. `-`                       ____    |  |`
+              `. `.                       ,'`````.  ;  ;`
+                `._`.        __________   `.      \'__/`
+                   `-:._____/______/___/____`.     \  `
+                               |       `._    `.    \
+                               `._________`-.   `.   `.___
+                                             SSt  `------'`
+                                             полет нормальный?
+             <div class="card-body">
+                 <h5 class="card-title">Вы заказали:</h5>
+                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+             </div>
+         </div>
+     </div> -->
+
+{% endblock %}
